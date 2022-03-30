@@ -8,20 +8,22 @@ function setup() {
 
 function draw() {
 
-if (mouseY >=height/2) {
+	background(0)
 
-	background(0);
-	noFill () ;
-}
- else {
+	if(mouseY>=height/2 && mouseX<=width/2)  
+    fill	(0,0,205); // azul
 
-Fill(230);
- }
+    else if(mouseY<height/2 && mouseX<=width/2) 
+    fill	(255,0,0); // vermelho
+
+    else if(mouseY<height/2 && mouseX>width/2) 
+    fill	(0,255,0); // verde 
+
+	else{
+		 noFill();
+	}
 
 	stroke(230);
 	strokeWeight(2);
-	noFill();
 	circle(width / 2, height / 2, height / 4);
-
-
 }
